@@ -18,8 +18,7 @@ public class CardDeck {
 
         for(String pattern: PATTERNS){
             for(int i=1;i<=CARD_COUNT;i++){
-                String denomination=this.numberToDenomination(i);
-                Card card=new Card(pattern,denomination);
+                Card card=new Card(pattern,i);
                 cards.add(card);
             }
         }
@@ -28,18 +27,7 @@ public class CardDeck {
     public Card getCard(){
         return null;
     }
-    private String numberToDenomination(int number){
-        if(number==1){
-            return "A";
-        }else  if(number==11){
-            return "J";
-        }else if(number==12){
-            return "Q";
-        } else if (number == 13) {
-            return "K";
-        }
-        return  String.valueOf(number);
-    }
+
 
     @Override
     public String toString() {
